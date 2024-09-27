@@ -36,7 +36,7 @@ class CasbinMiddleware:
         else:
             response = JSONResponse(
                 status_code=HTTP_403_FORBIDDEN,
-                content="Forbidden"
+                content={ "detail" : "Forbidden" }
             )
 
             await response(scope, receive, send)
